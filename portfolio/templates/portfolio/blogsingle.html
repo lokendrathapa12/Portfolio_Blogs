@@ -1,0 +1,79 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content%}
+  <!-- background shapes -->
+  <section class="page-title bg-primary position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="text-white font-tertiary">Blogs</h1>
+        </div>
+      </div>
+    </div>
+  <img src="{% static 'portfolio/images/illustrations/page-title.png' %}" alt="illustrations" class="bg-shape-1 w-100">
+  <img src="{% static 'portfolio/images/illustrations/leaf-pink-round.png' %}" alt="illustrations" class="bg-shape-2">
+  <img src="{% static 'portfolio/images/illustrations/dots-cyan.png' %}" alt="illustrations" class="bg-shape-3">
+  <img src="{% static 'portfolio/images/illustrations/leaf-orange.png' %}" alt="illustrations" class="bg-shape-4">
+  <img src="{% static 'portfolio/images/illustrations/leaf-yellow.png' %}" alt="illustrations" class="bg-shape-5">
+  <img src="{% static 'portfolio/images/illustrations/dots-group-cyan.png' %}" alt="illustrations" class="bg-shape-6">
+  <img src="{% static 'portfolio/images/illustrations/leaf-cyan-lg.png' %}" alt="illustrations" class="bg-shape-7">
+  </section>
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="font-tertiary mb-3">{{data.title}}</h3>
+        <p class="font-secondary mb-5">{{data.publishdate}} </p>
+        <div class="content">
+          <img src="{{data.image.url}}" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+          <strong>{{data.content}}</strong>
+          <p>{{data.detail}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--<section>
+<div class="mt-5">
+    <h4 class="font-weight-bold mb-3 border-bottom pb-3 p-5">Leave a Comment</h4>
+    <div class="COL-MD-8">
+      <div class="bg-white rounded text-center p-5 shadow-down">
+        <form action="" class="contact-form d-inline" method="POST" novalidate>
+          {% csrf_token %}
+          {% for fm in fm %}
+          {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+          {% endfor %}
+          <div class="col-lg-6 col-10 mx-auto">
+            <input class="btn btn-info w-100" type="submit" value="Comment"><br><br>
+          </div>
+        </form>
+      </div>
+    </div>>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h4 class="font-weight-bold mb-3">Comments 03</h4>
+        <div class="bg-gray p-5 mb-4">
+          <div class="media border-bottom py-4">
+            <img src="{% static 'portfolio/images/user-1.jpg' %}" class="img-fluid align-self-start rounded-circle mr-3" alt="">
+            <div class="media-body">
+              {% for cmt in cmt %}
+              <h5 class="mt-0">{{request.user}}</h5>
+              <p>{{cmt.date}}</p>
+              <p>{{cmt.comments}}</p>
+              <a href="#!" class="btn btn-transparent btn-sm pl-0">Reply</a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+<button class="pl-10px pb-3"><a class="btn btn-primary" href="{% url 'blogpage' %}">Back</a></button>
+<!-- /blog -->
+{% endblock content %}

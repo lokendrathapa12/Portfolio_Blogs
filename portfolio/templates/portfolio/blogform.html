@@ -1,0 +1,43 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+ <!-- background shapes -->
+ <!--<img src="{% static 'portfolio/images/illustrations/page-title.png' %}" alt="illustrations" class="bg-shape-1 w-100">
+ <img src="{% static 'portfolio/images/illustrations/leaf-pink-round.png' %}" alt="illustrations" class="bg-shape-2">
+ <img src="{% static 'portfolio/images/illustrations/dots-cyan.png' %}" alt="illustrations" class="bg-shape-3">
+ <img src="{% static 'portfolio/images/illustrations/leaf-orange.png' %}" alt="illustrations" class="bg-shape-4">
+ <img src="{% static 'portfolio/images/illustrations/leaf-yellow.png' %}" alt="illustrations" class="bg-shape-5">
+ <img src="{% static 'portfolio/images/illustrations/dots-group-cyan.png' %}" alt="illustrations" class="bg-shape-6">
+ <img src="{% static 'portfolio/images/illustrations/leaf-cyan-lg.png' %}" alt="illustrations" class="bg-shape-7">
+</section>-->
+<!-- /page title -->
+<!-- contact -->
+{% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+        {{error.label_tag}} {{error}} {{error.errors|striptags}}
+    {% endfor %}
+{% endif %} 
+<section class="section section-on-footer" data-background="{% static 'portfolio/images/backgrounds/bg-dots.png' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="section-title">Blog Post Form</h1>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <form action="" class="contact-form" method="POST" enctype="multipart/form-data" novalidate>
+            {% csrf_token %}
+            {% for fm in form %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+            {% endfor %}
+            <div class="col-lg-6 col-10 mx-auto">
+              <input class="btn btn-primary w-100" type="submit" value="Save">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /contact -->
+  {% endblock content %}

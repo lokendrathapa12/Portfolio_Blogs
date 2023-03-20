@@ -1,0 +1,183 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+<section class="page-title bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">About Me</h1>
+      </div>
+    </div>
+  </div>
+<img src="{% static 'portfolio/images/illustrations/page-title.png' %}" alt="illustrations" class="bg-shape-1 w-100">
+<img src="{% static 'portfolio/images/illustrations/leaf-pink-round.png' %}" alt="illustrations" class="bg-shape-2">
+<img src="{% static 'portfolio/images/illustrations/dots-cyan.png' %}" alt="illustrations" class="bg-shape-3">
+<img src="{% static 'portfolio/images/illustrations/leaf-orange.png' %}" alt="illustrations" class="bg-shape-4">
+<img src="{% static 'portfolio/images/illustrations/leaf-yellow.png' %}" alt="illustrations" class="bg-shape-5">
+<img src="{% static 'portfolio/images/illustrations/dots-group-cyan.png' %}" alt="illustrations" class="bg-shape-6">
+<img src="{% static 'portfolio/images/illustrations/leaf-cyan-lg.png' %}" alt="illustrations" class="bg-shape-7">
+</section>
+
+<!-- about -->
+<section class="section pt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p>Welcome to the About section of Lokendra Thapa's website.
+
+        </p>
+        <p>Mr. Lokendra Thapa is a highly driven and accomplished individual hailing from the beautiful
+        district of Jajarkot, Nepal. He completed his School Leaving Certificate (SLC) from Bal Higher 
+        Secondary School in Jajarkot in the year 2072 BS, and went on to pursue higher education in
+         the Science faculty at GVN Secondary School in Nepalgunj. He successfully completed
+          his +2 studies in 2074 BS, and later earned a Bachelor's degree in BSc CSIT from 
+          Nepalgunj Campus in the year 2078 BS.</p>
+          <p>
+            The unwavering support of his parents, Bimal Thapa and Kalika Thapa,
+             has been instrumental in Mr. Thapa's academic success. He currently 
+             resides in the vibrant town of Kirtipur, Kathmandu, where he 
+             continues to pursue his passion for learning and growth.
+          </p>
+          <p>When he's not busy with his professional pursuits, Mr. Thapa loves to travel and
+             explore new places, write code, and indulge in his love for movies and web series.
+             His insatiable curiosity and thirst for knowledge have always propelled him to seek 
+             out new challenges and opportunities to expand his skill set.
+
+            With a strong academic background and a diverse range of interests and experiences, 
+            Mr. Thapa is committed to making a positive impact in the world. He looks forward to 
+            collaborating with like-minded individuals on exciting new projects and initiatives.
+            
+            Thank you for taking the time to learn more about Mr. Lokendra Thapa.</p>
+      </div>
+      <div class="col-md-4 text-center drag-lg-top">
+        <div class="shadow-down mb-4">
+          <img src="{% static 'portfolio/images/about/profile.jpg' %}" alt="author" class="img-fluid w-100 rounded-lg border-thick border-white">
+        </div>
+        <h4>Lokendra Thapa</h4>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about -->
+
+<!-- Work Process -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Work Process</h2>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
+        <div class="">
+          <img src="{% static 'portfolio/images/icons/plan.png' %}" class="mb-4" alt="icon">
+          <h4 class="mb-4">Research and Plan</h4>
+          <p>The process of research and planning in a web development
+             project involves identifying project goals, researching the
+              market and competitors, creating a plan with a timeline and
+               budget, considering SEO, accessibility, and security, and 
+               designing with user experience in mind. This process ensures 
+               that the final product meets stakeholder expectations and is 
+               functional and user-friendly.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
+        <img src="{% static 'portfolio/images/icons/design.png' %}" class="mb-4" alt="icon">
+        <h4 class="mb-4">Design and Develop</h4>
+        <p>The process of designing and developing a web development project typically 
+          involves several stages, including creating wireframes and mockups, developing
+           the front-end and back-end code, and integrating any necessary third-party 
+           services or APIs. The design and development process may also involve testing 
+           and debugging to ensure that the final product is functional and user-friendly. 
+          .</p>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center hover-shadow pt-3">
+        <img src="{% static 'portfolio/images/icons/print.png' %}" class="mb-4" alt="icon">
+        <h4 class="mb-4">Deliver</h4>
+        <p>Project delivery involves a series of processes that are typically carried out in 
+          a sequential manner. These processes may include planning, initiating, executing, 
+          monitoring, controlling, and closing. The planning process involves defining project
+           scope, identifying deliverables, setting timelines, and creating a project plan. The 
+           initiation process involves assembling a project team and defining roles and responsibilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ./Work Process -->
+
+<!-- team -->
+<!--<section class="section bg-cover" data-background="{% static 'portfolio/images/backgrounds/team-bg.png' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">My Team</h2>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+        <div class="card text-center">
+          <img src="{% static 'portfolio/images/team/member-1.png' %}" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Jack Schenziwe</h4>
+            <p class="text-light font-secondary">Project Manager</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+        <div class="card text-center">
+          <img src="{% static 'portfolio/images/team/member-2.png' %}" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Jack Schenziwe</h4>
+            <p class="text-light font-secondary">Project Manager</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4 mb-md-0">
+        <div class="card text-center">
+          <img src="{% static 'portfolio/images/team/member-3.png' %}" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Jack Schenziwe</h4>
+            <p class="text-light font-secondary">Project Manager</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+<!-- /team -->
+
+<!-- clients -->
+<!--<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">My Clients</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="client-logo-slider d-flex align-items-center">
+          <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
+          <a href="% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
+          <a href="% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
+          <a href="% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
+          <a href="% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
+          <a href="% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
+          <a href="% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
+          <a href="% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
+          <a href="% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
+          <a href="% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+<!-- /clients -->
+{% endblock content %}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Creative Portfolio Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Kross Template v1.0">
+  
+  <!-- theme meta -->
+  <meta name="theme-name" content="kross" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'portfolio/images/favicon.png' %}" />
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'portfolio/plugins/bootstrap/bootstrap.min.css' %}">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{% static 'portfolio/plugins/slick/slick.css' %}">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{% static 'portfolio/plugins/themify-icons/themify-icons.css' %}">
+
+  <!-- Main Stylesheet -->
+  <link href="{% static 'portfolio/css/style.css' %}" rel="stylesheet">
+
+</head>
+<body>
+  {% if messages %}
+  {% for message in messages %}
+      {{message.label_tag}} {{message}} {{message.errors|striptags}}
+  {% endfor %}
+{% endif %}
+<header class="navigation fixed-top">
+  <div>
+    {% if request.user.is_authenticated %}
+    {% else %}
+    <center><h4 class="text-white font-tertiary m=20px"> Note: If you want to read the blogs and 
+      see projects  that i have done, you have to login first.</h4></center>
+      {% endif %}
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand font-tertiary h3" href="{% url 'homepage' %}"><img src="{% static 'portfolio/images/logos.png' %}" alt="Myself"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  {% block nav %}
+    <div class="collapse navbar-collapse text-center" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <button class="btn-primary"><a class="nav-link" href="{% url 'homepage' %}">Home</a></button>
+        </li>
+        <li class="nav-item">
+          <button class="btn-primary"><a class="nav-link" href="{% url 'aboutpage' %}">about</a></button>
+        </li>
+        <li class="nav-item">
+          <button class="btn-primary"><a class="nav-link" href="{% url 'contactpage' %}">Contact</a></button>
+        </li> 
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <button class="btn-primary"><a class="nav-link" href="{% url 'blogpage' %}">Blog</a></button>
+        </li>
+        <li class="nav-item">
+          <button class="btn-primary"><a class="nav-link" href="{% url 'portfoliopage' %}">Portfolio</a></button>
+        </li>
+        {%  if request.user.is_staff %}
+        <li class="nav-item">
+          <button class="btn-primary"> <a class="nav-link" href="{% url 'blogformpage' %}">Post Blog</a></button>
+         </li>
+         <li class="nav-item">
+           <button class="btn-primary"> <a class="nav-link" href="{% url 'portfolioformpage' %}">Post Project</a></button>
+          </li>
+          {% endif %}
+        <li class="nav-item">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="ti-user icon mb-5 d-inline-block">{{request.user.username}}</i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <a href="{% url 'logoutpage' %}"><button class="dropdown-item" type="button">LogOut</button></a>
+            </div>
+          </div>
+        </li> 
+        {% else %}
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <button class="btn-primary"><a class="nav-link" href="{% url 'signinpage' %}">SignIn</a></button>
+          </li>
+          <li class="nav-item">
+            <button class="btn-primary"><a class="nav-link" href="{% url 'loginpage' %}">LogIn</a></button>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+    {% endblock nav%}
+  </nav>
+</header>
+
+<!-- hero area -->
+<section class="hero-area bg-primary" id="parallax">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 mx-auto">
+        <!-- social icon -->
+       <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
+         <li class="mb-3"><a class="text-white" href="https://www.facebook.com/lokesh.thapa.123276"><i class="ti-facebook"></i></a></li><br>
+         <li class="mb-3"><a class="text-white" href="https://www.instagram.com/lokeshthapa2325/"><i class="ti-instagram"></i></a></li><br>
+         <li class="mb-3"><a class="text-white" href="https://github.com/lokendrathapa12"><i class="ti-github"></i></a></li><br>
+       </ul>
+ <!-- /social icon -->
+     </div>
+      <div class="col-lg-10 mx-auto">
+        <h1 class="text-white font-tertiary">Hi! I’m <br> Lokendra Thapa <br>Backend developer</h1>
+      </div>
+    </div>
+  </div>
+  <div class="layer-bg w-100">
+    <img class="img-fluid w-100" src="{% static 'portfolio/images/illustrations/leaf-bg.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l2">
+    <img src="{% static 'portfolio/images/illustrations/dots-cyan.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l3">
+    <img src="{% static 'portfolio/images/illustrations/leaf-orange.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l4">
+    <img src="{% static 'portfolio/images/illustrations/dots-orange.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l5">
+    <img src="{% static 'portfolio/images/illustrations/leaf-yellow.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l6">
+    <img src="{% static 'portfolio/images/illustrations/leaf-cyan.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l7">
+    <img src="{% static 'portfolio/images/illustrations/dots-group-orange.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l8">
+    <img src="{% static 'portfolio/images/illustrations/leaf-pink-round.png' %}" alt="bg-shape">
+  </div>
+  <div class="layer" id="l9">
+    <img src="{% static 'portfolio/images/illustrations/leaf-cyan-2.png' %}" alt="bg-shape">
+  </div>
+  
+</section>
+<!-- /hero area -->
+
+{% block content %}
+
+{% endblock content %}
+
+
+<!-- footer -->
+<footer class="bg-dark footer-section">
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text-light">Email</h5>
+          <p class="text-white paragraph-lg font-secondary">lokendrathapa056@gmail.com</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-light">Phone</h5>
+          <p class="text-white paragraph-lg font-secondary">9842291418</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="text-light">Address</h5>
+          <p class="text-white paragraph-lg font-secondary">Kirtipur Kathmandu</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-top text-center border-dark py-5">
+    <p class="mb-0 text-light">&copy;<script>
+        var CurrentYear = new Date().getFullYear()
+        document.write(CurrentYear)
+      </script> Designed &amp; Developed by <a class="text-white-50" href="Themefisher">Lokendra Thapa</a></p>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="{% static 'portfolio/plugins/jQuery/jquery.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'portfolio/plugins/bootstrap/bootstrap.min.js' %}"></script>
+<!-- slick slider -->
+<script src="{% static 'portfolio/plugins/slick/slick.min.js' %}"></script>
+<!-- filter -->
+<script src="{% static 'portfolio/plugins/shuffle/shuffle.min.js' %}"></script>
+
+<!-- Main Script -->
+<script src="{% static 'portfolio/js/script.js' %}"></script>
+
+</body>
+</html>

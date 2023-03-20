@@ -1,0 +1,285 @@
+{% extends 'portfolio/base.html' %}
+<h1 class="color:'white">lokendra thapa</h1>
+{% load static %}
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto text-center">
+        <p class="font-secondary paragraph-lg text-dark">Mr. Lokendra Thapa is a
+           highly driven and accomplished individual hailing from the beautiful
+            district of Jajarkot, Nepal. He completed his School Leaving 
+            Certificate (SLC) from Bal Higher Secondary School in Jajarkot in 
+            the year 2072 BS, and went on to pursue higher education in the 
+            Science faculty at GVN Secondary School in Nepalgunj. He successfully
+             completed his +2 studies in 2074 BS, and later earned a Bachelor's 
+             degree in BSc CSIT from Nepalgunj Campus in the year 2078 BS.</p>
+        <a href="{% url 'aboutpage' %}" class="btn btn-transparent">know more</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about -->
+
+<!-- skills -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Skills</h2>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+        <div class="card shadow text-center">
+          <div class="position-relative rounded-top progress-wrapper" data-color="#fdb157">
+            <div class="wave" data-progress="70%"></div>
+          </div>
+          <div class="card-footer bg-white">
+            <h4 class="card-title">Python(70%)</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+        <div class="card shadow text-center">
+          <div class="position-relative rounded-top progress-wrapper" data-color="#9473e6">
+            <div class="wave" data-progress="70%"></div>
+          </div>
+          <div class="card-footer bg-white">
+            <h4 class="card-title">Python Django (70%)</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+        <div class="card shadow text-center">
+          <div class="position-relative rounded-top progress-wrapper" data-color="#bdecf6">
+            <div class="wave" data-progress="70%"></div>
+          </div>
+          <div class="card-footer bg-white">
+            <h4 class="card-title">Sql (70%)</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+        <div class="card shadow text-center">
+          <div class="position-relative rounded-top progress-wrapper" data-color="#ffbcaa">
+            <div class="wave" data-progress="60%"></div>
+          </div>
+          <div class="card-footer bg-white">
+            <h4 class="card-title">Git(60%)</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /skills -->
+
+<!-- experience -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center">
+        <img src="{% static 'portfolio/images/experience/icon-1.png' %}" alt="icon">
+        <p class="mb-0">2 Month</p>
+        <h4>Backend Developer(Intern)</h4>
+        <h6 class="text-light">Backend Developer(Intern)</h6>
+      </div>
+      <div class="col-lg-3 col-md-4 text-center">
+        <img src="{% static 'portfolio/images/experience/icon-2.png' %}" alt="icon">
+        <p class="mb-0">1 Year</p>
+        <h4>Webpage Designing</h4>
+        <h6 class="text-light">Webpage Designing</h6>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ./experience -->
+
+<!-- education -->
+<section class="section position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="col-lg-6 col-md-6 mb-80">
+        <div class="d-flex">
+          <div class="mr-lg-5 mr-3">
+            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          </div>
+          <div>
+            <p class="text-dark mb-1">2015</p>
+            <h4>S.L.C</h4>
+            <p class="mb-0 text-light">Bal Higher Secondary School Jajarkot</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 mb-80">
+        <div class="d-flex">
+          <div class="mr-lg-5 mr-3">
+            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          </div>
+          <div>
+            <p class="text-dark mb-1">2017</p>
+            <h4>+2 Science </h4>
+            <p class="mb-0 text-light">GVN Secondary School Nepalgunj</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 mb-80">
+        <div class="d-flex">
+          <div class="mr-lg-5 mr-3">
+            <i class="ti-medall icon icon-light icon-bg bg-white shadow rounded-circle d-block"></i>
+          </div>
+          <div>
+            <p class="text-dark mb-1">2022</p>
+            <h4>BSC CSIT</h4>
+            <p class="mb-0 text-light">Nepalgunj Campus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bg image -->
+  <img class="img-fluid edu-bg-image w-100" src="{% static 'portfolio/images/backgrounds/education-bg.png' %}" alt="bg-image">
+</section>
+<!-- /education -->
+
+<!-- services -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Services</h2>
+      </div>
+      <div class="col-md-6 mb-6 mb-md-0">
+        <div class="card hover-shadow shadow">
+          <div class="card-body text-center px-4 py-5">
+            <i class="ti-palette icon mb-5 d-inline-block"></i>
+            <h4 class="mb-4">Weba Application</h4>
+            <p>Our company provides web application development services
+               using HTML, CSS, Bootstrap, and the Python Django framework. 
+               With our expertise in these technologies, we can create dynamic
+                and responsive web applications that meet the needs of our 
+                clients. From designing and implementing a user-friendly 
+                interface to building a robust backend using Django, 
+                we offer end-to-end solutions to ensure the success of 
+                your web project. Contact us today to learn more about our
+                web application development services.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-6 mb-md-0">
+        <div class="card hover-shadow shadow">
+          <div class="card-body text-center px-4 py-5">
+            <i class="ti-vector icon mb-5 d-inline-block"></i>
+            <h4 class="mb-4">Python Project</h4>
+            <p>There are several services that can be incredibly useful 
+              for Python projects, whether you are working on a persona
+              project or developing software for a company.
+               One such service is cloud hosting, which allows 
+               you to deploy and scale your application without 
+               worrying about infrastructure management. Popular 
+               cloud providers like Amazon Web Services, Microsoft 
+               Azure, and Google Cloud Platform offer cloud-based hosting 
+               for Python applications.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /services -->
+
+<!-- testimonial -->
+<!--<section class="section bg-primary position-relative testimonial-bg-shapes">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title text-white mb-5">Testimonials</h2>
+      </div>
+      <div class="col-lg-10 mx-auto testimonial-slider">
+        <!-- slider-item -->
+        <!--<div class="text-center testimonial-content">
+          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
+          <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'portfolio/images/testimonial/client-1.png' %}"
+            alt="client-image">
+          <h4 class="text-white">Jesica Gomez</h4>
+          <h6 class="text-light mb-4">CEO, Funder</h6>
+        </div>
+        <!-- slider-item -->
+       <!---- <div class="text-center testimonial-content">
+          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
+          <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
+              ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in
+            voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur.</p>
+          <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'portfolio/images/testimonial/client-1.png' %}"
+            alt="client-image">
+          <h4 class="text-white">Jesica Gomez</h4>
+          <h6 class="text-light mb-4">CEO, Funder</h6>
+        </div>
+        <!-- slider-item -->
+        <!--<div class="text-center testimonial-content">
+          <i class="ti-quote-right text-white icon mb-4 d-inline-block"></i>
+          <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <strong>quis nostrud exercitation
+              ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</strong> Duis aute irure dolor in reprehenderit in
+            voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur.</p>
+          <img class="img-fluid rounded-circle mb-4 d-inline-block" src="{% static 'portfolio/images/testimonial/client-1.png' %}"
+            alt="client-image">
+          <h4 class="text-white">Jesica Gomez</h4>
+          <h6 class="text-light mb-4">CEO, Funder</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- bg shapes -->
+  <!--<img src="{% static 'portfolio/images/backgrounds/map.png' %}" alt="map" class="img-fluid bg-map">
+  <img src="{% static 'portfolio/images/illustrations/dots-group-v.png' %}" alt="bg-shape" class="img-fluid bg-shape-1">
+  <img src="{% static 'portfolio/images/illustrations/leaf-orange.png' %}" alt="bg-shape" class="img-fluid bg-shape-2">
+  <img src="{% static 'portfolio/images/illustrations/dots-group-sm.png' %}" alt="bg-shape" class="img-fluid bg-shape-3">
+  <img src="{% static 'portfolio/images/illustrations/leaf-pink-round.png' %}" alt="bg-shape" class="img-fluid bg-shape-4">
+  <img src="{% static 'portfolio/images/illustrations/leaf-cyan.png' %}" alt="bg-shape" class="img-fluid bg-shape-5">
+</section>
+<!-- /testimonial -->
+
+<!-- client logo slider -->
+<!--<section class="section pb-0">
+  <div class="container">
+    <div class="client-logo-slider d-flex align-items-center">
+      <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="{% static 'portfolio/images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
+      <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="{% static 'portfolio/images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
+      <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="{% static 'portfolio/images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
+      <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="{% static 'portfolio/images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
+      <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="{% static 'portfolio/images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
+      <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="{% static 'portfolio/images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
+      <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="{% static 'portfolio/images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
+      <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="{% static 'portfolio/images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
+      <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="{% static 'portfolio/images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
+      <a href="{% url 'contactpage' %}" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+          src="{% static 'portfolio/images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
+    </div>
+  </div>
+</section>
+<!-- /client logo slider -->
+{% endblock content %}

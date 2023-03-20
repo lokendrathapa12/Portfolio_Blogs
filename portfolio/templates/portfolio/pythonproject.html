@@ -1,0 +1,80 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+<!-- background shapes -->
+<section class="page-title bg-primary position-relative">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="text-white font-tertiary">Portfolio</h1>
+      </div>
+    </div>
+  </div>
+<img src="{% static 'portfolio/images/illustrations/page-title.png' %}" alt="illustrations" class="bg-shape-1 w-100">
+<img src="{% static 'portfolio/images/illustrations/leaf-pink-round.png' %}" alt="illustrations" class="bg-shape-2">
+<img src="{% static 'portfolio/images/illustrations/dots-cyan.png' %}" alt="illustrations" class="bg-shape-3">
+<img src="{% static 'portfolio/images/illustrations/leaf-orange.png' %}" alt="illustrations" class="bg-shape-4">
+<img src="{% static 'portfolio/images/illustrations/leaf-yellow.png' %}" alt="illustrations" class="bg-shape-5">
+<img src="{% static 'portfolio/images/illustrations/dots-group-cyan.png' %}" alt="illustrations" class="bg-shape-6">
+<img src="{% static 'portfolio/images/illustrations/leaf-cyan-lg.png' %}" alt="illustrations" class="bg-shape-7">
+</section>
+
+<!-- portfolio -->
+<center> <h1 class="text-black font-tertiary">Python Project</h1></center>
+<section class="section">
+  <div class="container">
+    <div class="card-deck">
+        {% for project in project %}
+      <div class="card">
+        <img class="card-img-top" src="{{project.priject_image.url}}" alt="Card image cap">
+        <div class="card-body">
+         <center><h5 class="card-title">{{project.porj_name}} [{{project.proj_cat}} project]</h5></center>
+         <center><h5 class="card-title">Project Link: {{project.porj_link}}</h5></center>
+         <p>{{project.proj_des}}</p>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>
+<a href="{% url 'portfoliopage' %}"><button class="btn btn-primary">Back</button></a>
+<!-- /portfolio -->
+
+<!-- clients -->
+<!--<section class="section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">My Clients</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="client-logo-slider d-flex align-items-center">
+          <a href="contact.html" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
+          <a href="contact.html" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
+          <a href="contact.html" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
+          <a href="contact.html" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
+          <a href="contact.html" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
+          <a href="contact.html" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-1.png' %}" alt="client-logo"></a>
+          <a href="contact.html" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-2.png' %}" alt="client-logo"></a>
+          <a href="contact.html" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-3.png' %}" alt="client-logo"></a>
+          <a href="contact.html" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-4.png' %}" alt="client-logo"></a>
+          <a href="contact.html" class="text-center d-block outline-0 p-4"><img class="d-unset img-fluid"
+              src="{% static 'portfolio/images/clients-logo/client-logo-5.png' %}" alt="client-logo"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>-->
+<!-- /clients -->
+{% endblock content %}

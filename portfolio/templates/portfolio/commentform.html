@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Creative Portfolio Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Kross Template v1.0">
+  
+  <!-- theme meta -->
+  <meta name="theme-name" content="kross" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'portfolio/images/favicon.png' %}" />
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'portfolio/plugins/bootstrap/bootstrap.min.css' %}">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{% static 'portfolio/plugins/slick/slick.css' %}">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{% static 'portfolio/plugins/themify-icons/themify-icons.css' %}">
+
+  <!-- Main Stylesheet -->
+  <link href="{% static 'portfolio/css/style.css' %}" rel="stylesheet">
+
+</head>
+<body>
+{% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+        {{error.label_tag}} {{error}} {{error.errors|striptags}}
+    {% endfor %}
+{% endif %} 
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <form action="" class="contact-form" method="POST"novalidate enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for fm in fm %}
+            {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+            {% endfor %}
+            <div class="col-lg-6 col-10 mx-auto">
+              <input class="btn btn-primary w-100" type="submit" value="Comment"><br><br>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
