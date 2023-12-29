@@ -24,6 +24,7 @@
 <section class="section">
   <div class="container">
     <div class="card-deck">
+      {% if project %}
         {% for project in project %}
       <div class="card">
         <img class="card-img-top" src="{{project.priject_image.url}}" alt="Card image cap">
@@ -34,6 +35,9 @@
         </div>
     </div>
     {% endfor %}
+    {% else %}
+    <h3>No Project Available</h3>
+    {% endif %}
     </div>
   </div>
 </section>
