@@ -7,7 +7,7 @@
     "routes":[
         {
             "src": "/(.*)",
-            "dest":"portfolio_blogs/project2/wsgi.py"
+            "dest":"/"
         }
     ]
 }
