@@ -22,3 +22,4 @@ urlpatterns = [
    #path("comment/", views.commentview, name='commentpage'),
    #path("commentform/", views.commentformview, name='commentformpage'),
 ]+static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
++ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
